@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성 밸런스 종신보험 | CEO 전용 비즈니스 솔루션</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVc2gXj2b4X1hA2Fh5+7R5P8c/OaU2t8FzGg1zP6I2Nq+3FwK0Cg7n+C7gY5F+z3J4+t7F+rA2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        
+        .premium-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #0ea5e9 100%);
+        }
+        
+        .gold-accent {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        .executive-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .impact-number {
+            font-size: 4.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .roi-highlight {
+            background: linear-gradient(135deg, #16a34a, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .urgent-pulse {
+            animation: pulse-urgent 2s infinite;
+        }
+        
+        @keyframes pulse-urgent {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .impact-number { font-size: 3rem; }
+            .chart-container { height: 300px; }
+        }
+        
+        .business-metric {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-left: 6px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .business-metric:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .competitive-advantage {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            border: 2px solid #22c55e;
+        }
+        
+        .risk-mitigation {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid #f59e0b;
+        }
+        
+        .market-opportunity {
+            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+            border: 2px solid #8b5cf6;
+        }
+        
+        .executive-summary {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Executive Header -->
+        <header class="premium-gradient text-white py-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="text-sm font-light opacity-90 mb-2">SAMSUNG LIFE INSURANCE</div>
+                        <h1 class="text-4xl font-light tracking-tight">밸런스 종신보험</h1>
+                        <p class="text-xl opacity-90 mt-2">CEO를 위한 전략적 자산 관리 솔루션</p>
+                    </div>
+                    <div class="urgent-pulse gold-accent px-8 py-4 rounded-lg">
+                        <div class="text-center text-white">
+                            <div class="text-2xl font-bold">🚨 D-DAY</div>
+                            <div class="text-sm font-medium">8월 8일 판매 종료 유예</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <!-- Executive Summary -->
+            <section class="executive-summary rounded-2xl p-8 mb-8 executive-card">
+                <h2 class="text-3xl font-bold mb-6 text-center">💼 CEO Executive Summary</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-yellow-400 mb-2">200%</div>
+                        <div class="text-lg">최소 투자수익률</div>
+                        <div class="text-sm opacity-80">납입 대비 2배 보장</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-green-400 mb-2">20년</div>
+                        <div class="text-lg">시장 독점권</div>
+                        <div class="text-sm opacity-80">특허 기반 경쟁우위</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-blue-400 mb-2">3-IN-1</div>
+                        <div class="text-lg">통합 솔루션</div>
+                        <div class="text-sm opacity-80">보장+연금+유동성</div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-white bg-opacity-10 rounded-lg">
+                    <p class="text-center text-lg font-medium">
+                        <span class="text-yellow-400">■</span> 특허 기반 혁신 상품으로 20년간 시장 독점
+                        <span class="text-green-400 mx-2">■</span> 최소 200% ROI 보장으로 리스크 제로
+                        <span class="text-blue-400 mx-2">■</span> 8월 8일 판매 종료 유예로 마지막 기회
+                    </p>
+                </div>
+            </section>
+
+            <!-- Market Intelligence -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">📊 Market Intelligence: 왜 지금인가?</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="market-opportunity executive-card rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-purple-700">🎯 시장 트렌드 선점</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-purple-500 rounded-full mr-3"></span>
+                                사망보험금 유동화 제도 (하반기 시행 예정)
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-purple-500 rounded-full mr-3"></span>
+                                1인 가구 증가 & 고령화 가속
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-3 h-3 bg-purple-500 rounded-full mr-3"></span>
+                                노후 자금 부족 심화
+                            </li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-purple-100 rounded-lg">
+                            <p class="text-sm font-medium text-purple-800">💡 선제적 대응으로 시장 리더십 확보</p>
+                        </div>
+                    </div>
+                    
+                    <div class="competitive-advantage executive-card rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-green-700">🏆 경쟁 우위 확보</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                                <span class="font-medium">특허 독점권</span>
+                                <span class="text-green-600 font-bold">2044년까지</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                                <span class="font-medium">시장 검증</span>
+                                <span class="text-green-600 font-bold">명예의 전당</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                                <span class="font-medium">업계 최초</span>
+                                <span class="text-green-600 font-bold">종신형 신연금</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROI Analysis -->
+            <section class="mb-8">
+                <div class="executive-card rounded-2xl p-8">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">💰 ROI 분석: 투자 대비 수익성</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-blue-600">실제 투자 시뮬레이션</h3>
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg">
+                                <div class="text-center mb-4">
+                                    <div class="text-lg text-gray-600">50세 남성 CEO 기준</div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between border-b pb-2">
+                                        <span>월 납입액</span>
+                                        <span class="font-bold">100만원</span>
+                                    </div>
+                                    <div class="flex justify-between border-b pb-2">
+                                        <span>납입 기간</span>
+                                        <span class="font-bold">10년</span>
+                                    </div>
+                                    <div class="flex justify-between border-b pb-2">
+                                        <span>총 투자금</span>
+                                        <span class="font-bold text-blue-600">1.2억원</span>
+                                    </div>
+                                    <div class="flex justify-between text-lg">
+                                        <span class="font-bold">최소 보장 수익</span>
+                                        <span class="font-bold text-green-600 text-xl">2.4억원</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Risk Management -->
+            <section class="mb-8">
+                <div class="risk-mitigation executive-card rounded-2xl p-8">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-amber-800">⚖️ 리스크 관리: 안전성 vs 수익성</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-white rounded-lg">
+                            <div class="text-4xl mb-4">🛡️</div>
+                            <h3 class="text-lg font-bold mb-2">금리 리스크 ZERO</h3>
+                            <p class="text-sm text-gray-600">공시이율 변동과 무관한 고정 보장</p>
+                        </div>
+                        <div class="text-center p-6 bg-white rounded-lg">
+                            <div class="text-4xl mb-4">🔒</div>
+                            <h3 class="text-lg font-bold mb-2">원금 보장</h3>
+                            <p class="text-sm text-gray-600">납입보험료의 200% 최저 보장</p>
+                        </div>
+                        <div class="text-center p-6 bg-white rounded-lg">
+                            <div class="text-4xl mb-4">⚡</div>
+                            <h3 class="text-lg font-bold mb-2">유동성 확보</h3>
+                            <p class="text-sm text-gray-600">중도해지 가능한 유연한 구조</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-amber-50 border-l-4 border-amber-400 rounded">
+                        <p class="font-medium text-amber-800">
+                            <span class="font-bold">CEO 관점:</span> 전통적인 투자 대비 안정성과 수익성을 동시에 확보하는 보수적 성장 전략
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Advantage -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">🎯 전략적 우위: 경쟁사 대비 차별화</h2>
+                <div class="executive-card rounded-2xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="premium-gradient text-white">
+                                <tr>
+                                    <th class="px-6 py-4 text-left">비교 항목</th>
+                                    <th class="px-6 py-4 text-center">일반 종신보험</th>
+                                    <th class="px-6 py-4 text-center bg-amber-600">VS</th>
+                                    <th class="px-6 py-4 text-center">삼성 밸런스</th>
+                                    <th class="px-6 py-4 text-center">경쟁 우위</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 font-medium">수익 보장</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">불확실</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center text-xl">⚡</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">200% 보장</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center font-bold text-green-600">확실한 ROI</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium">특허 기술</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">없음</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center text-xl">⚡</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">20년 독점</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center font-bold text-blue-600">시장 독점</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium">활용도</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">단일 목적</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center text-xl">⚡</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">3-in-1</span>
+                                    </td>
+                                    <td class="px-6 py-4 text-center font-bold text-purple-600">다목적 활용</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Case -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">📈 Business Case: 실제 활용 시나리오</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="executive-card rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">시나리오 1: 노후 자금 확보</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between p-3 bg-blue-50 rounded">
+                                <span>70세 연금 전환</span>
+                                <span class="font-bold">연 875만원</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-blue-50 rounded">
+                                <span>종신 수령</span>
+                                <span class="font-bold text-blue-600">평생 보장</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-blue-50 rounded">
+                                <span>사망 시 유족 보장</span>
+                                <span class="font-bold">2.3억원</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-100 rounded">
+                            <p class="text-sm font-medium text-blue-800">CEO 은퇴 후 안정적 현금흐름 확보</p>
+                        </div>
+                    </div>
+                    
+                    <div class="executive-card rounded-2xl p-6">
+                        <h3 class="text-xl font-bold mb-4 text-green-600">시나리오 2: 유연한 자금 활용</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between p-3 bg-green-50 rounded">
+                                <span>10년간 선지급</span>
+                                <span class="font-bold">7,260만원</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded">
+                                <span>사업 자금 활용</span>
+                                <span class="font-bold text-green-600">즉시 현금화</span>
+                            </div>
+                            <div class="flex justify-between p-3 bg-green-50 rounded">
+                                <span>잔여 연금 전환</span>
+                                <span class="font-bold">연 437만원</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-green-100 rounded">
+                            <p class="text-sm font-medium text-green-800">사업 확장 자금과 노후 보장 동시 확보</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Plan -->
+            <section class="mb-8">
+                <div class="executive-summary rounded-2xl p-8 executive-card">
+                    <h2 class="text-3xl font-bold text-center mb-8">🚀 Action Plan: Next Steps</h2>
+                    <div class="grid md:grid-cols-4 gap-4 mb-6">
+                        <div class="text-center p-4 bg-white bg-opacity-20 rounded-lg">
+                            <div class="text-2xl font-bold mb-2">STEP 1</div>
+                            <div class="text-sm">전문 상담</div>
+                            <div class="text-xs opacity-80 mt-1">개인별 맞춤 설계</div>
+                        </div>
+                        <div class="text-center p-4 bg-white bg-opacity-20 rounded-lg">
+                            <div class="text-2xl font-bold mb-2">STEP 2</div>
+                            <div class="text-sm">포트폴리오 분석</div>
+                            <div class="text-xs opacity-80 mt-1">기존 자산과 연계</div>
+                        </div>
+                        <div class="text-center p-4 bg-white bg-opacity-20 rounded-lg">
+                            <div class="text-2xl font-bold mb-2">STEP 3</div>
+                            <div class="text-sm">가입 결정</div>
+                            <div class="text-xs opacity-80 mt-1">8월 8일 전 필수</div>
+                        </div>
+                        <div class="text-center p-4 bg-white bg-opacity-20 rounded-lg">
+                            <div class="text-2xl font-bold mb-2">STEP 4</div>
+                            <div class="text-sm">장기 운용</div>
+                            <div class="text-xs opacity-80 mt-1">전략적 자산 관리</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="inline-block gold-accent px-8 py-4 rounded-lg text-white font-bold text-lg urgent-pulse">
+                            ⏰ 판매 종료 유예까지 남은 시간이 얼마 없습니다 ⏰
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="executive-card rounded-2xl p-8 text-center">
+                <h2 class="text-2xl font-bold mb-6 text-slate-800">📞 전문 상담 및 가입 문의</h2>
+                <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-lg">
+                    <div class="text-lg font-light mb-2">삼성생명 GFC사업부</div>
+                    <div class="text-2xl font-bold mb-2">박재박 팀장</div>
+                    <div class="text-3xl font-black text-yellow-300">📱 010-5137-2327</div>
+                    <div class="mt-4 text-sm opacity-90">CEO 전용 프리미엄 컨설팅 서비스</div>
+                </div>
+                <!-- Add phone and KakaoTalk buttons here -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+                    <a href="tel:01051372327" class="flex-1 sm:flex-none flex items-center justify-center bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-3"></i>
+                        전화 연결
+                    </a>
+                    <a href="https://open.kakao.com/o/s15lHyCh" target="_blank" class="flex-1 sm:flex-none flex items-center justify-center bg-yellow-400 text-slate-800 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105">
+                        <i class="fas fa-comment mr-3"></i>
+                        카카오 톡(1:1)
+                    </a>
+                </div>
+                <div class="mt-6 text-xs text-gray-500">
+                    본 자료는 상품 이해를 위한 요약 정보입니다. 가입 전 상품설명서를 반드시 확인하시기 바랍니다.
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // ROI Chart
+        const ctx = document.getElementById('roiChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['투자금 (1.2억)', '보장 수익 (1.2억)'],
+                datasets: [{
+                    data: [50, 50],
+                    backgroundColor: ['#3b82f6', '#22c55e'],
+                    borderWidth: 0,
+                    cutout: '60%'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            usePointStyle: true
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
